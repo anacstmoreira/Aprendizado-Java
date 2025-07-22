@@ -1,0 +1,59 @@
+package academy.devdojo.maratonajava.javacore.Hheranca.dominio;
+
+public class Pessoa {
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
+
+    static {
+        System.out.println("Bloco estatico de inicializaçao em pessoa");
+    }
+    {
+        System.out.println("Bloco de inicializaçao em pessoa");
+    }
+    {
+        System.out.println("Bloco de inicializaçao em pessoa 2");
+    }
+
+    public Pessoa(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+    }
+
+    public Pessoa(String nome, String cpf, Endereco endereco) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+    }
+
+    public void imprime(){
+        System.out.println("Nome: "+ this.nome);
+        System.out.println("CPF: "+this.cpf);
+        System.out.println("Rua: "+this.endereco.getRua() +" CEP: " + this.endereco.getCep());
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+}
