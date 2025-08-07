@@ -14,12 +14,11 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" +
-                "nome='" + nome + '\'' +
-                ", tipoCliente=" + tipoCliente +
-                ", tipoClienteInt=" + tipoCliente.VALOR +
-                ", tipoPagamento=" + tipoPagamento +
-                '}';
+        return "Cliente " +
+                "nome= '" + nome + '\'' +
+                ", tipo de Cliente= " + tipoCliente +
+                ", tipo de Cliente Int= " + tipoCliente.VALOR +
+                ", tipo de Pagamento= " + tipoPagamento;
     }
 
     public String getNome() {

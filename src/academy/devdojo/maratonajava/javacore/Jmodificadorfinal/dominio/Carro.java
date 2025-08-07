@@ -9,6 +9,10 @@ public class Carro {
         this.nome = nome;
     }
 
+    //não tem final antes de void então pode ser sobrescrito
+    public void imprime(){
+    }
+
     public String getNome() {
         return nome;
     }

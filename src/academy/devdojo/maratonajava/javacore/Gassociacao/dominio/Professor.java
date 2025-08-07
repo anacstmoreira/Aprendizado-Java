@@ -11,7 +11,7 @@ public class Professor {
 
     public Professor(String nome, String especialidade) {
         this.nome = nome;
-        this.especialidade= especialidade;
+        this.especialidade = especialidade;
     }
 
     public Professor(String nome, String especialidade, Seminario[] seminarios) {
@@ -20,19 +20,23 @@ public class Professor {
         this.seminarios = seminarios;
     }
 
-    public void imprime(){
+    public void imprime() {
         System.out.println("-------------");
-        System.out.println("Professor: "+ this.nome);
-        if (seminarios == null){ return; }
+        System.out.println("Professor: " + this.nome);
+        if (seminarios == null) {
+            return;
+        }
         System.out.println("== Seminarios cadastrados==");
         for (Seminario seminario : this.seminarios) {
             System.out.println(seminario.getTitulo());
             System.out.println(seminario.getLocal().getEndereco());
-            if(seminario.getAlunos()==null){continue;}
+            if (seminario.getAlunos() == null) {
+                continue;
+            }
             System.out.println("== Alunos ==");
             for (Aluno aluno : seminario.getAlunos()) {
-                System.out.print("Nome: "+ aluno.getNome());
-                System.out.println(" Idade: "+ aluno.getIdade());
+                System.out.print("Nome: " + aluno.getNome());
+                System.out.println(" Idade: " + aluno.getIdade());
             }
         }
     }
